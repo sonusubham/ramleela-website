@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ସଦସ୍ୟ ଓ କଳାକାର | Members & Artists - Shree Ramleela Natya Sansad Kuspangi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet the talented artists, committee members, and supporting cast behind the Shree Ramleela Natya Sansad in Kuspangi.">
+    <meta name="keywords" content="Ramleela Cast, Kuspangi Ramleela Members, Ramayana Actors, Odisha Theatre Artists">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@300;400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================= */
+        /* SHARED PREMIUM THEME VARIABLES            */
+        /* ========================================= */
+        :root {
+            /* Light Mode (Default) */
+            --brand-gold: #D4AF37;
+            --brand-gold-light: #F9F2D4;
+            --brand-crimson: #8B0000;
+            --brand-dark: #121212;
+            --brand-dark-elevated: #1E1E1E;
+            
+            --surface-main: #FFFFFF;
+            --surface-alt: #F8F9FA;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            
+            --text-primary: #1A1A1A;
+            --text-secondary: #555555;
+            --text-light: #F5F5F5;
+            --text-muted-light: #AAAAAA;
+            
+            --border-light: rgba(0, 0, 0, 0.05);
+            --border-medium: rgba(0, 0, 0, 0.1);
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Dark Mode */
+        [data-theme="dark"] {
+            --surface-main: #121212;
+            --surface-alt: #1E1E1E;
+            --nav-bg: rgba(18, 18, 18, 0.85);
+            
+            --text-primary: #F5F5F5;
+            --text-secondary: #BBBBBB;
+            
+            --brand-dark: #000000;
+            --brand-dark-elevated: #111111;
+            --brand-gold-light: #2A2411;
+            
+            --border-light: rgba(255, 255, 255, 0.05);
+            --border-medium: rgba(255, 255, 255, 0.1);
+            --shadow-light: rgba(0, 0, 0, 0.5);
+            --shadow-medium: rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; transition: font-size 0.3s ease; }
+        body {
+            font-family: 'Mukta Mahee', sans-serif;
+            background-color: var(--surface-alt);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .font-title { font-family: 'Yatra One', cursive; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+
+        /* ========================================= */
+        /* TOP BAR                                   */
+        /* ========================================= */
+        .top-bar { background-color: var(--brand-dark-elevated); color: var(--text-light); padding: 0.4rem 0; font-size: 0.85rem; border-bottom: 1px solid var(--border-light); z-index: 1001; position: relative; }
+        .top-bar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+        .top-announce-text { color: var(--brand-gold); font-weight: 600; letter-spacing: 0.5px; }
+        .top-bar-controls { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+        .accessibility-controls { display: flex; gap: 0.3rem; align-items: center; }
+        .acc-btn { background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); color: var(--text-light); cursor: pointer; padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: bold; font-size: 0.75rem; transition: var(--transition-smooth); }
+        .acc-btn:hover { background: var(--brand-gold); color: var(--brand-dark); border-color: var(--brand-gold); }
+        
+        /* ========================================= */
+        /* HEADER & NAVIGATION (Exact Match)         */
+        /* ========================================= */
+        header.nav-header { position: sticky; top: 0; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); transition: var(--transition-smooth); }
+        header.nav-header.scrolled { box-shadow: 0 10px 30px var(--shadow-light); }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 5rem; }
+        .brand-logo { display: flex; align-items: center; gap: 1rem; z-index: 1001; text-decoration: none; }
+        .logo-icon { width: 3rem; height: 3rem; background: var(--brand-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); flex-shrink: 0; }
+        
+        .main-logo { height: 4.5rem; width: auto; max-width: 250px; object-fit: contain; display: block; transition: transform 0.3s ease; }
+        .brand-logo:hover .main-logo { transform: scale(1.05); }
+        @media(max-width: 767px) { .main-logo { height: 3.5rem; } }
+
+        .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .brand-text h1 { font-size: 1.3rem; color: var(--text-primary); letter-spacing: 0.5px; transition: color 0.4s ease; margin: 0; }
+        .brand-text span { font-size: 0.8rem; color: var(--brand-crimson); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+
+        .desktop-nav { display: none; align-items: center; gap: 2rem; }
+        .desktop-nav a { font-weight: 600; font-size: 1rem; color: var(--text-secondary); position: relative; transition: var(--transition-smooth); padding: 1.5rem 0;}
+        .desktop-nav a:hover, .desktop-nav a.active { color: var(--brand-crimson); }
+        .desktop-nav a::after { content: ''; position: absolute; bottom: 15px; left: 0; width: 0; height: 2px; background: var(--brand-crimson); transition: var(--transition-smooth); }
+        .desktop-nav a:hover::after, .desktop-nav a.active::after { width: 100%; }
+
+        /* Dropdowns */
+        .dropdown { position: relative; display: flex; align-items: center; height: 100%; }
+        .dropdown-content { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(15px); background: var(--brand-dark-elevated); min-width: 160px; border-radius: 0.5rem; border: 1px solid var(--brand-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 0.5rem 0; display: flex; flex-direction: column; z-index: 1001; }
+        .nav-header.scrolled .dropdown-content { background: var(--surface-main); border-color: var(--border-medium); }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-content a { color: var(--text-light) !important; padding: 0.75rem 1.5rem; margin: 0; font-size: 0.95rem; }
+        .nav-header.scrolled .dropdown-content a { color: var(--text-primary) !important; }
+        .dropdown-content a::after { display: none; }
+        .dropdown-content a:hover { background: rgba(212, 175, 55, 0.2); color: var(--brand-gold) !important; }
+        .nav-header.scrolled .dropdown-content a:hover { background: var(--surface-alt); color: var(--brand-crimson) !important; }
+
+        .nav-controls-wrapper { display: flex; align-items: center; gap: 1rem; }
+        .nav-actions { display: none; align-items: center; gap: 1.5rem; }
+        @media(min-width: 1024px) { .desktop-nav, .nav-actions { display: flex; } }
+
+        .btn-donate { background: var(--brand-crimson); color: white; padding: 0.6rem 1.5rem; border-radius: 50px; font-weight: 600; transition: var(--transition-smooth); box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3); white-space: nowrap; }
+        .btn-donate:hover { background: var(--brand-gold); color: white; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+
+        .theme-toggle { background: none; border: none; color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; transition: color 0.3s ease; z-index: 1001; }
+        .theme-toggle:hover { color: var(--brand-gold); }
+        .theme-toggle svg { width: 1.5rem; height: 1.5rem; }
+        [data-theme="dark"] .moon-icon { display: none; }
+        [data-theme="light"] .sun-icon, :root:not([data-theme="dark"]) .sun-icon { display: none; }
+
+        /* Mobile Menu */
+        .mobile-toggle { display: block; background: none; border: none; color: var(--text-primary); cursor: pointer; z-index: 1001; padding: 0.5rem; }
+        .mobile-toggle svg { width: 2rem; height: 2rem; }
+        @media(min-width: 1024px) { .mobile-toggle { display: none; } }
+
+        .mobile-menu-overlay { position: fixed; inset: 0; background: var(--brand-dark); display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: var(--transition-smooth); z-index: 1005; overflow-y: auto; padding: 2rem 0;}
+        .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
+        .mobile-menu-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text-light); cursor: pointer; padding: 0.5rem; transition: color 0.3s ease; }
+        .mobile-menu-close:hover { color: var(--brand-gold); }
+        .mobile-menu-close svg { width: 2.5rem; height: 2.5rem; }
+        
+        .mobile-menu-overlay a { color: var(--text-light); font-size: 1.5rem; font-family: 'Yatra One', cursive; margin: 0.5rem 0; opacity: 0; transform: translateY(20px); transition: var(--transition-smooth); }
+        .sub-menu-mobile { display: flex; flex-direction: column; align-items: center; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 1rem; width: 80%; margin: 0.5rem 0;}
+        .sub-menu-mobile a { font-size: 1.2rem; margin: 0.25rem 0; color: var(--brand-gold-light); }
+        .mobile-menu-overlay.active a { opacity: 1; transform: translateY(0); }
+
+        /* ========================================= */
+        /* STICKY SOCIAL MEDIA BAR                   */
+        /* ========================================= */
+        .sticky-socials { position: fixed; left: 0; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; z-index: 100; box-shadow: 2px 2px 10px var(--shadow-light); }
+        .sticky-socials a { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: var(--surface-main); color: var(--text-primary); transition: var(--transition-smooth); border-bottom: 1px solid var(--border-light); border-right: 1px solid var(--border-light); }
+        .sticky-socials a:first-child { border-top-right-radius: 8px; }
+        .sticky-socials a:last-child { border-bottom-right-radius: 8px; border-bottom: none; }
+        .sticky-socials a svg { width: 20px; height: 20px; fill: currentColor; }
+        .sticky-socials a:hover { width: 60px; background: var(--brand-gold); color: white; }
+        @media(max-width: 768px) { .sticky-socials { display: none; } }
+
+        /* ========================================= */
+        /* INNER PAGE HERO                           */
+        /* ========================================= */
+        .inner-hero {
+            position: relative; height: 40vh; min-height: 350px;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            background-color: var(--brand-dark); overflow: hidden;
+            border-bottom-left-radius: 3rem; border-bottom-right-radius: 3rem;
+            box-shadow: 0 10px 30px var(--shadow-light);
+        }
+        .inner-hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1515091943-9d5c0ad275fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50');
+            background-size: cover; background-position: center; opacity: 0.5; z-index: 0;
+        }
+        .inner-hero-gradient {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%);
+            z-index: 1;
+        }
+        .inner-hero-content { position: relative; z-index: 10; padding: 0 1.5rem; }
+        .inner-hero-title { font-size: 3rem; color: #FFF; line-height: 1.2; text-shadow: 0 4px 15px rgba(0,0,0,0.6); margin-bottom: 0.5rem; }
+        .inner-hero-title span { color: var(--brand-gold); }
+        .inner-hero-subtitle { color: #E0E0E0; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+        @media(min-width: 768px) { .inner-hero-title { font-size: 4rem; } }
+
+        /* ========================================= */
+        /* MEMBERS & SEARCH SPECIFIC STYLES          */
+        /* ========================================= */
+        .section { padding: 5rem 0; flex-grow: 1; }
+        .text-center { text-align: center; }
+        .sec-title { font-size: 2.5rem; color: var(--text-primary); font-weight: 800; margin-bottom: 1rem; transition: color 0.4s ease; font-family: 'Yatra One', cursive;}
+        .sec-subtitle { color: var(--brand-crimson); font-weight: 700; letter-spacing: 2px; font-size: 0.95rem; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .title-divider { width: 60px; height: 3px; background-color: var(--brand-gold); margin: 0 auto 3rem auto; border-radius: 2px; }
+
+        .search-container { max-width: 600px; margin: 0 auto 2.5rem auto; position: relative; z-index: 5; }
+        .search-input { width: 100%; padding: 1rem 1.5rem 1rem 3.5rem; border-radius: 50px; border: 2px solid var(--brand-gold); font-size: 1.1rem; font-family: inherit; outline: none; background-color: var(--surface-main); color: var(--text-primary); box-shadow: 0 10px 25px var(--shadow-light); transition: border-color 0.3s, box-shadow 0.3s, background-color 0.4s, color 0.4s; }
+        .search-input:focus { border-color: var(--brand-crimson); box-shadow: 0 15px 35px var(--shadow-medium); }
+        .search-icon { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); width: 1.5rem; height: 1.5rem; color: var(--text-secondary); }
+        
+        .filter-container { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3.5rem; flex-wrap: wrap; }
+        .filter-btn { background-color: var(--surface-main); border: 2px solid var(--brand-gold); color: var(--text-primary); padding: 0.7rem 2rem; border-radius: 50px; font-size: 1.05rem; font-weight: bold; cursor: pointer; white-space: nowrap; transition: var(--transition-smooth); box-shadow: 0 4px 10px var(--shadow-light); }
+        .filter-btn:hover, .filter-btn.active { background-color: var(--brand-gold); color: var(--brand-dark); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); }
+
+        .member-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        @media(min-width: 640px) { .member-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+        @media(min-width: 1024px) { .member-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+        @media(min-width: 1280px) { .member-grid { grid-template-columns: repeat(5, 1fr); } }
+        
+        .member-item { display: none; animation: fadeIn 0.5s ease forwards; }
+        .member-item.show { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        
+        /* RESTORED RECTANGULAR & COMPACT CARD STYLING */
+        .member-card { 
+            background: var(--surface-main); border-radius: 1rem; box-shadow: 0 5px 15px var(--shadow-light); 
+            border: 1px solid var(--border-light); text-align: center; height: 100%; display: flex; 
+            flex-direction: column; overflow: hidden; transition: var(--transition-smooth); 
+        }
+        .member-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px var(--shadow-medium); border-color: var(--brand-gold); }
+        
+        .member-img-wrap { 
+            aspect-ratio: 1 / 1; /* Maintains perfect square proportions on all screens */
+            height: auto; 
+            overflow: hidden; background: var(--surface-alt); 
+            border-bottom: 3px solid var(--brand-gold); position: relative; width: 100%; 
+        }
+        
+        .member-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.6s ease; display: block; }
+        .member-card:hover .member-img-wrap img { transform: scale(1.1); }
+        
+        .member-info { padding: 1rem 0.5rem; background: var(--surface-main); flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start; width: 100%; }
+        .member-info h3 { font-weight: bold; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.2; transition: color 0.4s ease; font-family: 'Yatra One', cursive;}
+        .member-info .designation { color: var(--brand-crimson); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; line-height: 1.3; }
+        .member-info .period { color: var(--text-muted-light); font-size: 0.75rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--border-medium); }
+        
+        .ex-member .member-img-wrap img { filter: grayscale(100%) sepia(20%); } /* Subtle vintage effect for ex-members */
+        
+        .no-results { display: none; grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-primary); font-size: 1.25rem; font-weight: bold; background: var(--surface-main); border-radius: 1.5rem; border: 2px dashed var(--brand-gold); transition: background-color 0.4s ease, color 0.4s ease; }
+
+        /* ========================================= */
+        /* MODERN FOOTER                             */
+        /* ========================================= */
+        footer { background: var(--brand-dark-elevated); color: var(--text-light); padding: 5rem 0 2rem; border-top: 4px solid var(--brand-gold); margin-top: 4rem;}
+        .footer-grid { display: grid; gap: 3rem; margin-bottom: 3rem; }
+        @media(min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1.5fr; } }
+        
+        .footer-logo { font-family: 'Yatra One', cursive; font-size: 1.8rem; color: var(--brand-gold); margin-bottom: 1rem; }
+        .footer-text { color: var(--text-muted-light); font-size: 0.95rem; max-width: 350px; }
+        .footer-title { color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a { color: var(--text-muted-light); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--brand-gold); }
+        .contact-item { display: flex; gap: 1rem; color: var(--text-muted-light); margin-bottom: 1rem; align-items: flex-start; }
+        .contact-icon { color: var(--brand-gold); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: #777; font-size: 0.85rem; }
+        .footer-bottom span { color: var(--brand-gold); font-weight: bold; }
+
+        /* ========================================= */
+        /* RESPONSIVE MOBILE TWEAKS                  */
+        /* ========================================= */
+        @media(max-width: 767px) {
+            .top-announce-text { width: 100%; text-align: center; font-size: 0.8rem; padding: 0.4rem 1rem; }
+            .accessibility-controls { display: none; }
+            .top-bar-controls { display: none; }
+            .nav-wrapper { padding: 0 0.5rem; }
+            .brand-logo { gap: 0.5rem; }
+            .logo-icon { width: 2.2rem; height: 2.2rem; font-size: 0.9rem; }
+            .brand-text h1 { font-size: 1.1rem; }
+            .brand-text span { font-size: 0.7rem; }
+            .nav-controls-wrapper { gap: 0.25rem; }
+            .theme-toggle, .mobile-toggle { padding: 0.25rem; }
+            
+            .filter-btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+            
+            /* Compact Mobile Cards */
+            .member-info { padding: 0.75rem 0.5rem; }
+            .member-info h3 { font-size: 1rem; }
+            .member-info .designation { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Social Media Bar (Desktop) -->
+    <div class="sticky-socials" aria-label="Social Media Links">
+        <a href="https://www.facebook.com/share/17ooWqH7xq/" aria-label="Follow us on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://youtube.com/@kuspangiramlillanatyasansa1173?si=J6XxWJY5bI45FGgd" aria-label="Subscribe on YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122-2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="#" aria-label="Follow us on Twitter"><svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-announce-text" id="announce-text">ଓଡ଼ିଶାର ଏକ ପ୍ରାଚୀନ ତଥା ପବିତ୍ର ରାମଲୀଳା ମହୋତ୍ସବ | ଆପଣଙ୍କୁ ସ୍ଵାଗତ</div>
+            <div class="top-bar-controls">
+                <div class="accessibility-controls">
+                    <span style="opacity: 0.8; font-size: 0.75rem; margin-right: 2px;">FONT:</span>
+                    <button class="acc-btn" onclick="changeFontSize(-1)" aria-label="Decrease Font Size">A-</button>
+                    <button class="acc-btn" onclick="changeFontSize(0)" aria-label="Default Font Size">A</button>
+                    <button class="acc-btn" onclick="changeFontSize(1)" aria-label="Increase Font Size">A+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Glass Header -->
+    <header class="nav-header" id="navbar">
+        <div class="container nav-wrapper">
+            <!-- Logo Only -->
+            <a href="../" class="brand-logo" aria-label="Home">
+    
+            <img src="../assets/images/logo.png" alt="Ramleela Logo" class="main-logo">
+            
+            <div class="brand-text">
+                <h1 class="font-title">ଶ୍ରୀ ଶ୍ରୀ ରାମଲୀଳା ନାଟ୍ୟ ସଂସଦ</h1>
+                <span>କୁଶପଙ୍ଗୀ</span>
+            </div>
+        </a>
+            
+            <!-- Centered Desktop Nav with Dropdowns -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="../index.html">ମୁଖ୍ୟ ପୃଷ୍ଠା</a>
+                
+                <div class="dropdown">
+                    <a>ଆମ ବିଷୟରେ ▾</a>
+                    <div class="dropdown-content">
+                        <a href="../about/">ଆମ ବିଷୟରେ</a>
+                        <a href="../history/">ଇତିହାସ</a>
+                    </div>
+                </div>
+                
+                <a href="../members/" class="active">ସଦସ୍ୟ</a>
+                
+                <div class="dropdown">
+                    <a>ଗ୍ୟାଲେରୀ ▾</a>
+                    <div class="dropdown-content">
+                        <a href="../photogallery/">ଫଟୋ</a>
+                        <a href="../videos/">ଭିଡିଓ</a>
+                    </div>
+                </div>
+                
+                <a href="../contactus/">ଯୋଗାଯୋଗ</a>
+            </nav>
+
+            <!-- CTA / Controls -->
+            <div class="nav-controls-wrapper">
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+
+                <div class="nav-actions">
+                    <a href="../donate/" class="btn-donate">ଦାନ କରନ୍ତୁ</a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle" id="menu-btn" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close Menu">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <a href="../index.html">ମୁଖ୍ୟ ପୃଷ୍ଠା</a>
+        <div class="sub-menu-mobile">
+            <span style="color: var(--text-muted-light); font-size: 0.9rem; margin-bottom: 0.5rem;">ABOUT</span>
+            <a href="../about/">ଆମ ବିଷୟରେ</a>
+            <a href="../history/">ଇତିହାସ</a>
+        </div>
+        <a href="../members/" style="color: var(--brand-gold-light);">ସଦସ୍ୟ</a>
+        <div class="sub-menu-mobile">
+            <span style="color: var(--text-muted-light); font-size: 0.9rem; margin-bottom: 0.5rem;">GALLERY</span>
+            <a href="../photogallery/">ଫଟୋ</a>
+            <a href="../videos/">ଭିଡିଓ</a>
+        </div>
+        <a href="../contactus/">ଯୋଗାଯୋଗ</a>
+        <a href="../donate/" style="color: white; background: var(--brand-crimson); padding: 0.5rem 1.5rem; border-radius:50px; margin-top: 1.5rem; border: none;">ଦାନ କରନ୍ତୁ</a>
+        
+        <!-- Mobile Social Links -->
+        <div style="display: flex; gap: 1.5rem; margin-top: 3rem;">
+            <a href="#" style="margin:0; opacity: 1;"><svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122-2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+    </div>
+
+    <!-- Inner Page Hero Header 
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="inner-hero-gradient"></div>
+        <div class="container inner-hero-content reveal active">
+            <h1 class="font-title inner-hero-title">ଆମର <span>ସଦସ୍ୟ</span></h1>
+            <div class="inner-hero-subtitle">କଳାକାର ଏବଂ ପରିଚାଳକ ମଣ୍ଡଳୀ</div>
+        </div>
+    </section> -->
+
+    <!-- Main Content -->
+    <main class="section container">
+        <div class="reveal text-center">
+            <span class="sec-subtitle">ଆମର ପରିବାର</span>
+            <h2 class="sec-title font-title">ସଦସ୍ୟ ଓ କଳାକାର</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container reveal delay-1">
+            <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <input type="text" id="member-search" class="search-input" placeholder="ସଦସ୍ୟଙ୍କ ନାମ ଖୋଜନ୍ତୁ (Search members...)">
+        </div>
+
+        <!-- Strict Two-Tab Layout -->
+        <div class="filter-container reveal delay-1">
+            <button class="filter-btn active" data-filter="current">ବର୍ତ୍ତମାନ ସଦସ୍ୟ (Current Members)</button>
+            <button class="filter-btn" data-filter="ex-members">ପୂର୍ବତନ ସଦସ୍ୟ (Ex-Members)</button>
+        </div>
+
+        <!-- Members Grid -->
+        <div class="member-grid reveal delay-2" id="member-grid">
+            
+            <!-- No Results Message -->
+            <div id="no-results-msg" class="no-results">
+                କୌଣସି ସଦସ୍ୟ ମିଳିଲେ ନାହିଁ। (No members found)
+            </div>
+
+            <!-- ================= CURRENT MEMBERS ================= -->
+            
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/president2.jpeg?name=Ramesh+Sahu&background=D4AF37&color=fff&size=300" alt="President" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଡ. ସ୍ମୃତି ରଞ୍ଜନ ଲେଙ୍କା </h3>
+                        <p class="designation">ସଭାପତି</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/secretary.jpeg?name=Prasant+Raut&background=8B0000&color=fff&size=300" alt="Secretary" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବିଭୁ ପ୍ରସାଦ ନାୟକ </h3>
+                        <p class="designation">ସମ୍ପାଦକ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/rabindra.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ରବୀନ୍ଦ୍ର ସାମଲ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/kailash.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ କୈଳାଶ ଚନ୍ଦ୍ର ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/laxman.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଲକ୍ଷ୍ମଣ ନାୟକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/bimba.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବିମ୍ବାଧର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/bhikari.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଭିକାରି ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/jugal.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଯୁଗଳ କିଶୋର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/suda.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁଦର୍ଶନ ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/hrushikesh.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ହୃଷିକେଶ ବାରିକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/kula.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ କୁଳମଣି ନାୟକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/dharani.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଧରଣୀ ଧର ନାୟକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/gouranga.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଗୌରାଙ୍ଗ ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/dina.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଦିନବନ୍ଧୁ ସ୍ବାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/subas.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁବାସ ଚନ୍ଦ୍ର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/musa.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସଦାନନ୍ଦ ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/jadumani.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଯଦୁମଣି ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/ashok.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଅଶୋକ କୁମାର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/sita.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଅମୂଲ୍ୟ ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/ramesh.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ରମେଶ ଚନ୍ଦ୍ର ନାୟକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/sarat.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଶରତ ଚନ୍ଦ୍ର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/suda2.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁଦର୍ଶନ ବେହେରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/gagan.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଗଗନ ସ୍ବାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/dinabandhu.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଦିନବନ୍ଧୁ ପରିଡ଼ା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/braja.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବ୍ରଜ କିଶୋର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/bilas.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବିଳାସ ବାରିକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/amita.jpeg?name=Dibakar+Mahapatra&background=121212&color=fff&size=300" alt="Director" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଅରବିନ୍ଦ ବେଉରା</h3>
+                        <p class="designation">କଳାକାର</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/tukua.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଚିତ୍ତ ରଞ୍ଜନ ନାୟକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/bibhuti.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁଶାନ୍ତ କୁମାର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/kabi.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ କବିରାଜ ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/tutu.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ପ୍ରଶାନ୍ତ ସାହୁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/barendra.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବରେନ୍ଦ୍ର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/sushant.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁଶାନ୍ତ କୁମାର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/dilip.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଦିଲୀପ ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/mana.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଅମୂଲ୍ୟ କୁମାର ସାମଲ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/chinu.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଚିନୁ ସ୍ବାଗତ ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/gunja.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଚନ୍ଦ୍ରକାନ୍ତ ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/silu.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସିଲୁ ବାରିକ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/gaghua.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ପ୍ରଫୁଲ୍ଲ କୁମାର ବେହେରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/magia.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁରେଶ ପ୍ରସାଦ ଲେଙ୍କା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/susa.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁଶାନ୍ତ ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/gaman.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଗମନ ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/raju.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ରାଜକିଶୋର ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/prabash.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ପ୍ରବାସ କୁମାର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/chadhei.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ମୃତ୍ୟୁଞ୍ଜୟ ଲେଙ୍କା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/banti.jpeg?name=Anil+Nayak&background=D4AF37&color=fff&size=300" alt="Rama" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବିନ୍ଦୁ ସାଗର ଲେଙ୍କା</h3>
+                        <p class="designation"> କଳାକାର</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/himanshu.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ହିମାଂଶୁ ବେହେରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/gyana.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଜ୍ଞାନ ରଞ୍ଜନ ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/siba.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଶିବ ସୁନ୍ଦର ସାହୁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/sujit.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ସୁଜିତ୍ କୁମାର ବେଉରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/kakudi.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ଶ୍ରୀନିବାସ ବେହେରା</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item current show">
+                <div class="member-card">
+                    <div class="member-img-wrap"><img src="../assets/images/memberpics/benudhar.jpeg?name=Sunita+Biswal&background=8B0000&color=fff&size=300" alt="Sita" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3>ଶ୍ରୀ ବେଣୁଧର ସ୍ୱାଇଁ</h3>
+                        <p class="designation">କଳାକାର </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- ================= EX-MEMBERS ================= -->
+            <div class="member-item ex-members">
+                <div class="member-card ex-member">
+                    <div class="member-img-wrap"><img src="https://ui-avatars.com/api/?name=Madhab+Raut&background=cbd5e1&color=374151&size=300" alt="Late President" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3> </h3>
+                        <p class="designation"></p>
+                        <p class="period"></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="member-item ex-members">
+                <div class="member-card ex-member">
+                    <div class="member-img-wrap"><img src="https://ui-avatars.com/api/?name=Binod+Mohanty&background=cbd5e1&color=374151&size=300" alt="Former Director" loading="lazy"></div>
+                    <div class="member-info">
+                        <h3></h3>
+                        <p class="designation"></p>
+                        <p class="period"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modern Minimalist Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="reveal">
+                <div class="footer-logo">ରାମଲୀଳା ସଂସଦ</div>
+                <p class="footer-text">
+                    କୁଶପଙ୍ଗୀ ଗ୍ରାମର ସାଂସ୍କୃତିକ ଗୌରବ। ଧର୍ମ ସଂସ୍ଥାପନ ଏବଂ ପ୍ରଭୁ ଶ୍ରୀ ରାମଙ୍କ ନୀତି ଓ ଆଦର୍ଶକୁ ଜନମାନସରେ ପହଞ୍ଚାଇବା ଆମର ଲକ୍ଷ୍ୟ।
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="https://www.facebook.com/share/17ooWqH7xq/" aria-label="Facebook"><svg viewBox="0 0 24 24" style="width: 24px; fill: var(--text-muted-light);"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://youtube.com/@kuspangiramlillanatyasansa1173?si=qYAs2Z8kf4rd07Qy" aria-label="YouTube"><svg viewBox="0 0 24 24" style="width: 24px; fill: var(--text-muted-light);"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122-2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: white;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="reveal delay-1">
+                <h4 class="footer-title">ଲିଙ୍କ୍ ଗୁଡ଼ିକ</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">ମୁଖ୍ୟ ପୃଷ୍ଠା</a></li>
+                    <li><a href="../about/">ଆମ ବିଷୟରେ</a></li>
+                    <li><a href="../history/">ଇତିହାସ</a></li>
+                    <li><a href="../members/">ସଦସ୍ୟ</a></li>
+                    <li><a href="../photogallery/">ଗ୍ୟାଲେରୀ</a></li>
+                    <li><a href="../donate/" style="color: var(--brand-gold);">ଦାନ କରନ୍ତୁ</a></li>
+                </ul>
+            </div>
+
+            <div class="reveal delay-2">
+                <h4 class="footer-title">ଯୋଗାଯୋଗ</h4>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>ଗ୍ରାମ: କୁସୁପାଙ୍ଗୀ, ପୋଷ୍ଟ: ମାଣିଆବନ୍ଧ<br>ଜିଲ୍ଲା: କଟକ</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>info@ramleelakuspangi.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 ଶ୍ରୀ ଶ୍ରୀ ରାମଲୀଳା ନାଟ୍ୟ ସଂସଦ, କୁଶପଙ୍ଗୀ । ସମସ୍ତ ଅଧିକାର ସୁରକ୍ଷିତ।</p>
+            <p style="margin-top: 5px;">Designed by <span>Sonu Subham</span></p>
+        </div>
+    </footer>
+
+    
+
+    <!-- Highly Optimized Vanilla JS -->
+    <script>
+        // 1. Dark Mode Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const rootElement = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            rootElement.setAttribute('data-theme', 'dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = rootElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                rootElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                rootElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // 2. Accessibility (Dynamic Font Size)
+        let rootFontSize = 16;
+        function changeFontSize(step) {
+            if (step === 0) rootFontSize = 16;
+            else if (step > 0 && rootFontSize <= 20) rootFontSize += 2;
+            else if (step < 0 && rootFontSize >= 14) rootFontSize -= 2;
+            document.documentElement.style.fontSize = rootFontSize + 'px';
+        }
+
+        // 3. Navbar Scroll Effect & Mobile Menu
+        const navbar = document.getElementById('navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const topBarHeight = document.querySelector('.top-bar').offsetHeight;
+
+        const checkScroll = () => {
+            if (navbar) {
+                if (window.scrollY > topBarHeight) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        };
+
+        // OPTIMIZATION: requestAnimationFrame Throttling for Scroll
+        let isScrolling = false;
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    checkScroll();
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        }, { passive: true });
+        
+        checkScroll(); // Check on load
+
+        function toggleMenu() {
+            const isActive = mobileMenu.classList.contains('active');
+            if(isActive){
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden'; 
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // 4. Scroll Reveal Observer
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+        const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // 5. Search & Filtering Logic for Members
+        const searchInput = document.getElementById('member-search');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const memberItems = document.querySelectorAll('.member-item');
+        const noResultsMsg = document.getElementById('no-results-msg');
+        
+        let currentFilter = 'current'; // Default active tab is 'current'
+
+        // Centralized function to display members based on Search + Active Tab
+        function updateMembersDisplay() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            memberItems.forEach(item => {
+                const textContent = item.textContent.toLowerCase();
+                const matchesSearch = textContent.includes(searchTerm);
+                const matchesFilter = item.classList.contains(currentFilter);
+
+                if (matchesFilter && matchesSearch) {
+                    item.classList.add('show');
+                    visibleCount++;
+                } else {
+                    item.classList.remove('show');
+                }
+            });
+
+            // Show "No Results" message if nothing matches
+            if (visibleCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+        }
+
+        // Tab Clicking
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.getAttribute('data-filter');
+                
+                // Clear search input automatically when switching tabs
+                searchInput.value = ''; 
+                
+                updateMembersDisplay();
+            });
+        });
+
+        // Typing in the Search Box
+        searchInput.addEventListener('input', updateMembersDisplay);
+        
+        // Ensure accurate display immediately on load
+        updateMembersDisplay();
+    </script>
+</body>
+</html>"
