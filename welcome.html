@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ଉଦ୍‌ଘାଟନୀ ସମାରୋହ | Inauguration Ceremony</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@400;700&family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================= */
+        /* INAUGURATION PAGE STYLES                 */
+        /* ========================================= */
+        :root {
+            --brand-gold: #D4AF37;
+            --brand-gold-dark: #B8860B;
+            --brand-crimson: #8B0000;
+            --brand-crimson-deep: #4a0000;
+            --surface-parchment: #fdf5e6;
+            --marble-bg: radial-gradient(circle, #fffdfa 0%, #f3e9d2 100%);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: 'Mukta Mahee', sans-serif;
+            overflow: hidden; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .font-title { font-family: 'Yatra One', cursive; }
+
+        /* --- Realistic Theater Curtain Styling --- */
+        #curtain-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.4) 0px,
+                    rgba(0,0,0,0.1) 20px,
+                    transparent 40px,
+                    rgba(0,0,0,0.1) 60px,
+                    rgba(0,0,0,0.4) 80px
+                ),
+                linear-gradient(to bottom, var(--brand-crimson), var(--brand-crimson-deep));
+            background-size: 100% 100%, 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 4s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+            border-bottom: 20px solid transparent;
+            border-image: repeat 30 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath fill='%23D4AF37' d='M0 0h30v15H0z'/%3E%3Ccircle fill='%23B8860B' cx='15' cy='20' r='5'/%3E%3C/svg%3E") 30;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.9);
+        }
+
+        .curtain-content { 
+            text-align: center; 
+            color: white; 
+            padding: 2rem;
+            z-index: 1001;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .event-logo { 
+            height: 140px; 
+            margin-bottom: 15px; 
+            filter: drop-shadow(0 0 25px rgba(212,175,55,0.7)); 
+        }
+
+        #inaugurate-btn {
+            background: var(--brand-gold);
+            color: #111;
+            border: 3px solid #fff;
+            padding: 1.2rem 4rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            transition: all 0.3s ease;
+            margin-top: 25px;
+            font-family: 'Mukta Mahee', sans-serif;
+            text-transform: uppercase;
+        }
+
+        #inaugurate-btn:hover { 
+            transform: scale(1.05); 
+            background: #fff;
+            color: var(--brand-crimson);
+        }
+
+        /* --- Enhanced Traditional Plaque Styling (Compact for Laptops) --- */
+        #plaque-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #222, #000);
+            position: relative;
+        }
+
+        #plaque-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.5 7.5L40 10l-7.5 2.5L30 20l-2.5-7.5L20 10l7.5-2.5L30 0z' fill='%23D4AF37' fill-opacity='0.08'/%3E%3C/svg%3E");
+            opacity: 0.2;
+        }
+
+        .plaque {
+            background: var(--marble-bg);
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 120px rgba(0,0,0,0.9), 0 0 30px rgba(212,175,55,0.4);
+            max-width: 850px;
+            width: 90%;
+            max-height: 95vh; /* Safety for very small screens */
+            text-align: center;
+            position: relative;
+            border: 4px solid var(--brand-gold-dark);
+            overflow: hidden;
+        }
+
+        .plaque-border {
+            border: 2px solid var(--brand-gold);
+            outline: 6px double var(--brand-gold);
+            outline-offset: -18px;
+            padding: 40px 30px;
+            position: relative;
+            background: rgba(255,255,255,0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .plaque-top-icon {
+            font-size: 2.5rem;
+            color: var(--brand-crimson);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Sequential Animation Classes */
+        .animate-item {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .start-animation .animate-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.4s; }
+        .delay-2 { transition-delay: 1.2s; }
+        .delay-3 { transition-delay: 2.0s; }
+        .delay-4 { transition-delay: 3.0s; }
+        .delay-5 { transition-delay: 4.5s; }
+        .delay-6 { transition-delay: 6.0s; }
+        .delay-7 { transition-delay: 8.0s; } 
+        .delay-8 { transition-delay: 9.5s; } 
+
+        .plaque h2 { 
+            color: var(--brand-crimson); 
+            font-size: 2.8rem; 
+            margin: 0; 
+            text-shadow: 1px 1px 0px rgba(212,175,55,0.3);
+        }
+
+        .plaque hr { 
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
+            width: 60%; 
+            margin: 15px auto; 
+        }
+
+        .org-name {
+            font-size: 1.5rem;
+            color: var(--brand-crimson-deep);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .main-msg { 
+            font-size: 1.6rem; 
+            color: #111; 
+            margin-bottom: 5px; 
+            font-weight: bold;
+        }
+
+        .authority-box {
+            background: rgba(139, 0, 0, 0.05);
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin: 15px 0;
+        }
+
+        .president-name { 
+            font-size: 2.2rem; 
+            color: var(--brand-crimson); 
+            margin: 0; 
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .authority-role { 
+            color: #555; 
+            font-weight: bold; 
+            margin-bottom: 8px; 
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .presence-text {
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 10px;
+            line-height: 1.6;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .presence-text strong {
+            color: var(--brand-crimson-deep);
+        }
+
+        /* Prominent Designer Credit Styling */
+        .designer-credit-box {
+            margin: 20px auto 10px;
+            padding: 10px 25px;
+            background: linear-gradient(135deg, var(--brand-gold-light), #fff, var(--brand-gold-light));
+            border: 1px solid var(--brand-gold);
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .designer-credit {
+            font-size: 1rem;
+            color: #111;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .designer-credit strong {
+            color: var(--brand-crimson);
+            font-size: 1.15rem;
+        }
+
+        .date-place { 
+            display: flex; 
+            justify-content: space-between; 
+            font-weight: bold; 
+            color: #555; 
+            border-top: 1px solid rgba(212,175,55,0.4);
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        /* --- Animation trigger --- */
+        .curtain-up { transform: translateY(-110%); }
+
+        @media (max-width: 768px) {
+            .plaque-border { padding: 30px 15px; outline-offset: -12px; }
+            .plaque h2 { font-size: 2.2rem; }
+            .president-name { font-size: 1.8rem; }
+            .presence-text { font-size: 1rem; }
+            .event-logo { height: 100px; }
+            #inaugurate-btn { padding: 1rem 3rem; font-size: 1.4rem; }
+            .date-place { flex-direction: column; gap: 5px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CUSTOM SOUND SECTION -->
+    <audio id="reveal-sound" src="assets/images/inauguration.mp3" preload="auto"></audio>
+
+    <!-- The Red Ornate Theater Curtain -->
+    <div id="curtain-overlay">
+        <div class="curtain-content">
+            <img src="assets/images/logo.png" alt="Logo" class="event-logo">
+            <h1 class="font-title" style="font-size: 2.2rem; margin-bottom: 8px;">ୱେବସାଇଟ୍ ଉଦ୍‌ଘାଟନୀ ସମାରୋହ</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin: 0;">ଶ୍ରୀ ଶ୍ରୀ ରାମଲୀଳା ନାଟ୍ୟ ସଂସଦ, କୁଶପଙ୍ଗୀ</p>
+            <button id="inaugurate-btn">ଉଦ୍‌ଘାଟନ କରନ୍ତୁ</button>
+        </div>
+    </div>
+
+    <!-- The Traditional Inauguration Plaque -->
+    <div id="plaque-container">
+        <div class="plaque" id="plaque-box">
+            
+            <div class="plaque-border">
+                <span class="plaque-top-icon animate-item delay-1">ॐ</span>
+                
+                <h2 class="font-title animate-item delay-2">ଜୟ ଶ୍ରୀ ରଘୁନାଥ</h2>
+                
+                <hr class="animate-item delay-2">
+                
+                <div class="org-name animate-item delay-3">ଶ୍ରୀ ଶ୍ରୀ ରାମଲୀଳା ନାଟ୍ୟ ସଂସଦ, କୁଶପଙ୍ଗୀ</div>
+                
+                <p class="main-msg animate-item delay-4">ଅଫିସିଆଲ୍ ୱେବସାଇଟ୍</p>
+                
+                <div class="authority-box animate-item delay-5">
+                    <div class="authority-role">ସଭାପତି</div>
+                    <h3 class="president-name">ଡ. ସ୍ମୃତି ରଞ୍ଜନ ଲେଙ୍କା</h3>
+                </div>
+
+                <p class="presence-text animate-item delay-6">
+                    ଙ୍କ କରକମଳରେ, ସମ୍ପାଦକ <strong>ଶ୍ରୀ ବିଭୁ ପ୍ରସାଦ ନାୟକ</strong> ଏବଂ ଅନୁଷ୍ଠାନର ସମସ୍ତ କର୍ମକର୍ତ୍ତା ଓ ସଭ୍ୟବୃନ୍ଦଙ୍କ ଗରିମାମୟ ଉପସ୍ଥିତିରେ ଆଜି ଶୁଭ ଉଦ୍‌ଘାଟିତ ହେଲା |
+                </p>
+
+                <!-- Styled Prominent Designer Credit -->
+                <div class="designer-credit-box animate-item delay-7">
+                    <div class="designer-credit">
+                        ୱେବସାଇଟ୍ ନିର୍ମାଣ: <strong>ସୋନୁ ଶୁଭମ ବେଉରା</strong><br>
+                        
+                    </div>
+                </div>
+
+                <div class="date-place animate-item delay-8">
+                    <span>ତାରିଖ: ୦୭ ଅପ୍ରେଲ ୨୦୨୬</span>
+                    <span>ସ୍ଥାନ: କୁଶପଙ୍ଗୀ, ବାଙ୍କୀ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('inaugurate-btn').addEventListener('click', function() {
+            const curtain = document.getElementById('curtain-overlay');
+            const sound = document.getElementById('reveal-sound');
+            const plaqueBox = document.getElementById('plaque-box');
+
+            // 1. Play the Custom Sound
+            sound.play().catch(error => {
+                console.warn("Sound could not be played. Check path.", error);
+            });
+
+            // 2. Start theatrical curtain animation
+            curtain.classList.add('curtain-up');
+
+            // 3. Start sequential text reveal shortly after curtain starts moving
+            setTimeout(() => {
+                plaqueBox.classList.add('start-animation');
+            }, 800);
+
+            // 4. Redirect after sequence completes (18 seconds total)
+            setTimeout(() => {
+                window.location.href = 'index.html'; 
+            }, 18000); 
+        });
+
+        // Handle browser back-forward cache issues
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
