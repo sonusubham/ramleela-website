@@ -215,14 +215,38 @@
             padding-top: 5rem;
         }
         .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-        .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; animation: heroFade 20s infinite; }
+        .hero-slide { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-size: cover; 
+            background-position: center; 
+            opacity: 0; 
+            animation: heroFade 20s infinite; 
+            /* Added for GPU hardware acceleration */
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
         .hero-slide.paused { animation-play-state: paused !important; }
         
         .hero-slide:nth-child(1) { background-image: url('assets/images/banner7.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 0s; }
         .hero-slide:nth-child(2) { background-image: url('assets/images/banner5.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 5s; }
         .hero-slide:nth-child(3) { background-image: url('assets/images/banner6.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 10s; }
         .hero-slide:nth-child(4) { background-image: url('assets/images/grouppic.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 15s; }
+        
         @keyframes heroFade { 0% { opacity: 0; transform: scale(1); } 5% { opacity: 1; } 20% { opacity: 1; } 25% { opacity: 0; transform: scale(1.05); } 100% { opacity: 0; transform: scale(1.05); } }
+
+        /* New optimized animation for mobile (Fade only, no scaling) */
+        @keyframes heroFadeMobile { 
+            0% { opacity: 0; } 
+            5% { opacity: 1; } 
+            20% { opacity: 1; } 
+            25% { opacity: 0; } 
+            100% { opacity: 0; } 
+        }
 
         .hero-gradient { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%); z-index: 1; }
         .hero-content { position: relative; z-index: 10; width: 100%; margin-top: 2rem; }
@@ -537,6 +561,14 @@
         @media(max-width: 767px) {
             .section { padding: 2rem 0; }
             .hero { padding-bottom: 7rem; height: auto; } /* Prevent overlap on mobile */
+            
+            .hero-slide {
+                /* Switch to the lag-free animation on mobile */
+                animation: heroFadeMobile 20s infinite !important;
+                /* Ensure no scaling is applied initially */
+                transform: none !important;
+            }
+
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
             
