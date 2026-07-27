@@ -628,6 +628,44 @@
                 animation: none !important;
             }
         }
+        /* ========================================================= */
+/* MOBILE PERFORMANCE OVERHAUL (STOPS HEAVY ANIMATIONS)      */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+    /* 1. Stop the 4-image CSS animation loop & heavy transform scaling on mobile */
+    .hero-slide {
+        animation: none !important;
+        opacity: 0 !important;
+        transform: none !important;
+        will-change: auto !important;
+    }
+
+    /* 2. Keep ONLY the first hero banner image statically visible */
+    .hero-slide:first-child {
+        opacity: 1 !important;
+    }
+
+    /* 3. Reduce border radius clipping mask load during scroll */
+    .hero {
+        border-bottom-left-radius: 1.5rem !important;
+        border-bottom-right-radius: 1.5rem !important;
+    }
+
+    /* 4. Turn off continuous floating animation on the event card */
+    .next-event-glass {
+        animation: none !important;
+    }
+
+    /* 5. Disable heavy background blur filters on sticky header & badges */
+    header.nav-header.scrolled,
+    .hero-badge,
+    .next-event-glass {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(18, 18, 18, 0.98) !important;
+    }
+}
     </style>
 </head>
 <body>
