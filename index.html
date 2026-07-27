@@ -584,6 +584,50 @@
             /* Fix for News Cutout grid (2 per row on mobile) */
             .news-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem; }
         }
+
+                /* ========================================================= */
+        /* MOBILE SCROLL PERFORMANCE FIXES (ZERO DESIGN CHANGE)      */
+        /* ========================================================= */
+
+        /* 1. Force Hardware GPU Acceleration on Animated Hero Elements */
+        .hero-slide {
+            will-change: transform, opacity;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .next-event-glass {
+            will-change: transform;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* 2. Mobile-Specific Performance Optimizations */
+        @media (max-width: 768px) {
+            /* Disable expensive blur filters during mobile rendering while matching visual appearance */
+            header.nav-header.scrolled {
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                background: rgba(18, 18, 18, 0.98) !important;
+            }
+
+            [data-theme="light"] header.nav-header.scrolled {
+                background: rgba(255, 255, 255, 0.98) !important;
+            }
+
+            .hero-badge, 
+            .next-event-glass {
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                background: rgba(20, 20, 20, 0.92) !important;
+            }
+
+            /* Pause the floating card animation on mobile to free up CPU thread for scrolling */
+            .next-event-glass {
+                animation: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1099,7 +1143,7 @@
 
         <div class="container footer-bottom">
             <p>&copy; 2026 ଶ୍ରୀ ଶ୍ରୀ ରାମଲୀଳା ନାଟ୍ୟ ସଂସଦ, କୁଶପଙ୍ଗୀ । ସମସ୍ତ ଅଧିକାର ସୁରକ୍ଷିତ।</p>
-            <p>Desiged by Sonu's Creation</p>
+            <p>Designed by Sonu's Creation</p>
         </div>
     </footer>
 
