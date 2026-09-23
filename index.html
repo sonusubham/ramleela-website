@@ -42,7 +42,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@300;400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     
-    <style>
+<style>
         /* ========================================= */
         /* SHARED PREMIUM THEME VARIABLES            */
         /* ========================================= */
@@ -215,7 +215,21 @@
             padding-top: 5rem;
         }
         .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-        .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; animation: heroFade 20s infinite; }
+        .hero-slide { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-size: cover; 
+            background-position: center; 
+            opacity: 0; 
+            animation: heroFade 20s infinite; 
+            /* GPU Acceleration */
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
         .hero-slide.paused { animation-play-state: paused !important; }
         
         .hero-slide:nth-child(1) { background-image: url('assets/images/banner7.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 0s; }
@@ -223,6 +237,15 @@
         .hero-slide:nth-child(3) { background-image: url('assets/images/banner6.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 10s; }
         .hero-slide:nth-child(4) { background-image: url('assets/images/grouppic.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=50&fm=webp'); animation-delay: 15s; }
         @keyframes heroFade { 0% { opacity: 0; transform: scale(1); } 5% { opacity: 1; } 20% { opacity: 1; } 25% { opacity: 0; transform: scale(1.05); } 100% { opacity: 0; transform: scale(1.05); } }
+
+        /* New optimized animation for mobile (Fade only, no scaling) */
+        @keyframes heroFadeMobile { 
+            0% { opacity: 0; } 
+            5% { opacity: 1; } 
+            20% { opacity: 1; } 
+            25% { opacity: 0; } 
+            100% { opacity: 0; } 
+        }
 
         .hero-gradient { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%); z-index: 1; }
         .hero-content { position: relative; z-index: 10; width: 100%; margin-top: 2rem; }
@@ -536,9 +559,39 @@
         /* ========================================= */
         @media(max-width: 767px) {
             .section { padding: 2rem 0; }
-            .hero { padding-bottom: 7rem; height: auto; } /* Prevent overlap on mobile */
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
+            
+            /* ========================================= */
+            /* PERFECT MOBILE HERO DESIGN                */
+            /* ========================================= */
+            .hero { 
+                min-height: 90vh; /* Immersive full screen */
+                height: auto;
+                padding-top: 6rem;
+                padding-bottom: 2rem;
+                align-items: flex-end; /* Pushes all text to the bottom half */
+            } 
+            .hero-slide {
+                background-size: cover !important; 
+                background-position: center 15% !important; /* Keeps focus on faces in landscape photos */
+                animation-name: heroFadeMobile !important; /* FIX: Only changes the animation type, keeps the 5s delays intact! */
+                transform: translateZ(0) !important; /* Hardware acceleration */
+                will-change: opacity;
+            }
+            .hero-gradient {
+                /* Cinematic gradient: 100% clear at top for faces, dark at bottom for text */
+                background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 35%, rgba(0,0,0,0.85) 70%, #000 100%) !important;
+            }
+            
+            .hero-content {
+                text-align: center; /* Center everything on mobile */
+                margin-top: auto; 
+            }
+            .hero-badge { margin: 0 auto 1rem auto; display: inline-block; }
+            .hero h1 { font-size: 2.2rem; margin-bottom: 1rem; text-shadow: 0 4px 15px rgba(0,0,0,0.8); }
+            .hero p { font-size: 1rem; margin: 0 auto 1.5rem auto; text-shadow: 0 2px 10px rgba(0,0,0,0.8); max-width: 95%; }
+            .hero-actions { justify-content: center; }
+            
+            .next-event-glass { margin: 2rem auto 0 auto; max-width: 95%; text-align: left; }
             
             .nav-wrapper { padding: 0 0.5rem; }
             .brand-logo { gap: 0.5rem; }
@@ -583,89 +636,37 @@
 
             /* Fix for News Cutout grid (2 per row on mobile) */
             .news-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem; }
-        }
 
-                /* ========================================================= */
-        /* MOBILE SCROLL PERFORMANCE FIXES (ZERO DESIGN CHANGE)      */
-        /* ========================================================= */
-
-        /* 1. Force Hardware GPU Acceleration on Animated Hero Elements */
-        .hero-slide {
-            will-change: transform, opacity;
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            transform: translate3d(0, 0, 0);
-        }
-
-        .next-event-glass {
-            will-change: transform;
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-        }
-
-        /* 2. Mobile-Specific Performance Optimizations */
-        @media (max-width: 768px) {
-            /* Disable expensive blur filters during mobile rendering while matching visual appearance */
-            header.nav-header.scrolled {
+            /* ========================================================= */
+            /* HIGH PERFORMANCE MOBILE OVERRIDES (STOPS SCROLL LAG)      */
+            /* ========================================================= */
+            
+            /* 1. Disable expensive GPU blurs that choke mobile processors */
+            header.nav-header.scrolled,
+            .next-event-glass,
+            .hero-badge,
+            .sub-menu-mobile {
                 backdrop-filter: none !important;
                 -webkit-backdrop-filter: none !important;
-                background: rgba(18, 18, 18, 0.98) !important;
             }
-
-            [data-theme="light"] header.nav-header.scrolled {
-                background: rgba(255, 255, 255, 0.98) !important;
+            
+            /* Give them solid backgrounds to replace the missing blur */
+            header.nav-header.scrolled { 
+                background: var(--surface-main) !important; 
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
             }
-
-            .hero-badge, 
-            .next-event-glass {
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-                background: rgba(20, 20, 20, 0.92) !important;
+            
+            /* 2. Stop the continuous floating animation on the event card */
+            .next-event-glass { 
+                background: rgba(20, 20, 20, 0.95) !important; 
+                animation: none !important; 
+                transform: translateZ(0); /* Forces static hardware rendering */
             }
-
-            /* Pause the floating card animation on mobile to free up CPU thread for scrolling */
-            .next-event-glass {
-                animation: none !important;
+            
+            .hero-badge { 
+                background: rgba(20, 20, 20, 0.9) !important; 
             }
         }
-        /* ========================================================= */
-/* MOBILE PERFORMANCE OVERHAUL (STOPS HEAVY ANIMATIONS)      */
-/* ========================================================= */
-
-@media (max-width: 768px) {
-    /* 1. Stop the 4-image CSS animation loop & heavy transform scaling on mobile */
-    .hero-slide {
-        animation: none !important;
-        opacity: 0 !important;
-        transform: none !important;
-        will-change: auto !important;
-    }
-
-    /* 2. Keep ONLY the first hero banner image statically visible */
-    .hero-slide:first-child {
-        opacity: 1 !important;
-    }
-
-    /* 3. Reduce border radius clipping mask load during scroll */
-    .hero {
-        border-bottom-left-radius: 1.5rem !important;
-        border-bottom-right-radius: 1.5rem !important;
-    }
-
-    /* 4. Turn off continuous floating animation on the event card */
-    .next-event-glass {
-        animation: none !important;
-    }
-
-    /* 5. Disable heavy background blur filters on sticky header & badges */
-    header.nav-header.scrolled,
-    .hero-badge,
-    .next-event-glass {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        background: rgba(18, 18, 18, 0.98) !important;
-    }
-}
     </style>
 </head>
 <body>
@@ -810,10 +811,10 @@
                 <div class="next-event-details">
                     <div class="next-event-date">
                         <span class="next-event-day"> </span>
-                        <span class="next-event-month">ଅପ୍ରେଲ 2027</span>
+                        <span class="next-event-month">ଅପ୍ରେଲ ୨୦୨୭</span>
                     </div>
                     <div class="next-event-title">
-                        ରାମଲୀଳା
+                        ରାମଲୀଳା ପରିବେଷଣ
                     </div>
                 </div>
             </div>
